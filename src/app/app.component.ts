@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { NavComponent } from './nav/nav.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'poc-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'app';
+  pageTitle: string = 'GM proof of concept';
 }
