@@ -1,0 +1,18 @@
+[
+    {
+        "roleId": 1,
+        "role": "administator"
+    },
+    {
+        "roleId": 2,
+        "role": "superuser"
+    },
+    {
+        "roleId": 3,
+        "role": "finance"
+    },
+    {
+        "roleId": 4,
+        "role": "marketing"
+    }
+]
