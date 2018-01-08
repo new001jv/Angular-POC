@@ -16,7 +16,7 @@ export class NavComponent implements OnInit {
 
   constructor(private _dataService: DataService) {
     this.userKey = 111111;
-   }
+  }
 
   ngOnInit() {
     this._dataService.getUsers()

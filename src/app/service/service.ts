@@ -22,13 +22,13 @@ export class DataService {
                     .catch(this.handleError);
     }
 
-    getRoles(): Observable<IProduct[]> {
-        return this._http.get<IProduct[]>(this._rolesUrl)
+    getRoles(): Observable <any> {
+        return this._http.get(this._rolesUrl)
                     .catch(this.handleError);
     }
 
-    getUsers(): Observable<IProduct[]> {
-        return this._http.get<IProduct[]>(this._usersUrl)
+    getUsers(): Observable <any>{
+        return this._http.get(this._usersUrl)
                     .catch(this.handleError);
     }
 
