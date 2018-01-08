@@ -1,28 +1,32 @@
 [
-
     {
         "userId": 111111,
-        "firstName": "Justin",
-        "lastName": "Valenzuela"
+        "firstName": "Justin1",
+        "lastName": "Valenzuela",
+        "roleId": 1,
+        "role": "Administrator"
     },
     {
         "userId": 222222,
-        "firstName": "Justin",
-        "lastName": "Valenzuela"
+        "firstName": "Justin2",
+        "lastName": "Valenzuela",
+        "role": "Marketing"
     },
     {
         "userId": 333333,
-        "firstName": "Justin",
-        "lastName": "Valenzuela"
+        "firstName": "Justin3",
+        "lastName": "Valenzuela",
+        "role": "Finance"
     },
     {
         "userId": 444444,
-        "firstName": "Justin",
-        "lastName": "Valenzuela"
+        "firstName": "Justin4",
+        "lastName": "Valenzuela",
+        "role": "Superuser"
     },
     {
         "userId": 555555,
-        "firstName": "Justin",
+        "firstName": "Justin5",
         "lastName": "Valenzuela"
     }
 ]

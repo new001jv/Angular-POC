@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top" *ngIf='userData'>
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -77,9 +77,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="navbar-text">DEV Server</li>
-        <li><a href="#">Justin Valenzuela</a></li>
+        <li><a href="#">{{userData.firstName + ' ' + userData.lastName}}</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{userData.role}} <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Rolls</a></li>
             <li><a href="#">Screens</a></li>

@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { NavComponent } from './nav/nav.component';
 import { DataService } from './service/service';
 
-declare var $:any;
-
 @Component({
 
   selector: 'poc-root',
