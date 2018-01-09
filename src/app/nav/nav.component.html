@@ -76,10 +76,10 @@
           </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-text">DEV Server</li>
+        <li class="navbar-text">{{userData.role}}</li>
         <li><a href="#" routerLink="/usersettings">{{userData.firstName + ' ' + userData.lastName}}</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{userData.role}} <span class="caret"></span></a>
+        <li class="dropdown" *ngIf="userData.roleId == 1">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#" routerLink="/roles">Rolls</a></li>
             <li><a href="#">Screens</a></li>

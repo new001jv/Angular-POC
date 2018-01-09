@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
-
+import { AuthGuard } from './service/auth-guard.service';
+import {AuthService} from './service/auth.service';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -13,6 +14,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RolesComponent } from './roles/roles.component';
 import { UserSettingsComponent } from './user-settings/user-settings.component';
+import { LoginComponent } from './login/login.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
     WelcomeComponent,
     PageNotFoundComponent,
     RolesComponent,
-    UserSettingsComponent
+    UserSettingsComponent,
+    LoginComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,10 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
         path: 'welcome', component: WelcomeComponent,
       },
       {
-        path: 'products', component: TableComponent
+        path: 'login', component: LoginComponent,
+      },
+      {
+        path: 'products', canActivate: [AuthGuard], component: ProductComponent
       },
       {
         path: 'roles', component: RolesComponent
@@ -51,7 +59,7 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
       }
     ])
   ],
-  providers: [],
+  providers: [ AuthGuard, AuthService ],
   bootstrap: [
     AppComponent,
     NavComponent,
